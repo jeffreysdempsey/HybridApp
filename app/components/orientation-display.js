@@ -17,13 +17,13 @@ export default Ember.Component.extend({
           console.log(heading);
         }, function(error){//if error
           console.log('Compass heading error.');
-          console.log(error)
+          console.log(error);
         });
       } catch (error) {
         console.log('Compass heading error.');
-        console.log(error)
+        console.log(error);
       }
       component.get('updateHeading')(component);
-    }, 100); //run after 100ms
+    }, 100); //run after 100ms, recurses to effectively run every 100ms
   }
 });
